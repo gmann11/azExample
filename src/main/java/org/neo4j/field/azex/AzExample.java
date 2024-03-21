@@ -13,7 +13,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import org.eclipse.jetty.server.Request;
-import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Result;
 import org.neo4j.graphdb.Transaction;
 import org.neo4j.internal.kernel.api.security.LoginContext;
@@ -23,9 +22,7 @@ import org.neo4j.server.web.JettyHttpConnection;
 
 public class AzExample extends AuthPlugin.Adapter { 
     private AuthProviderOperations api = null;
-    //private GraphDatabaseAPI db = null;
     private LoadingCache<String, Object> rolesCache = null;
-    //private GraphDatabaseService dbs = null;
     
     @Override
     public void initialize(AuthProviderOperations apo) {
